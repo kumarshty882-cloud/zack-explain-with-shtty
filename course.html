@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Courses | ZACK EXPLAIN BY SHTTY</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #080808;
+            color: #ffffff;
+        }
+
+        /* HEADER */
+        header {
+            width: 100%;
+            background: #0d0d0d;
+            border-bottom: 1px solid #d4af37;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-box {
+            max-width: 1200px;
+            margin: auto;
+            padding: 12px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        /* LOGO */
+        .logo-box {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo-box img {
+            width: 52px;
+            height: 52px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #d4af37;
+        }
+
+        .logo-text {
+            color: #d4af37;
+            font-size: 19px;
+            font-weight: bold;
+        }
+
+        /* NAVIGATION */
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 7px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #ffffff;
+            padding: 9px 11px;
+            border-radius: 6px;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        nav a:hover,
+        nav a.active {
+            background: #d4af37;
+            color: #000000;
+        }
+
+        /* MOBILE MENU BUTTON */
+        .menu-btn {
+            display: none;
+            color: #d4af37;
+            font-size: 28px;
+            cursor: pointer;
+        }
+
+        /* HERO */
+        .hero {
+            text-align: center;
+            padding: 70px 20px 45px;
+            background:
+                radial-gradient(circle at top, #211c0b 0%, #080808 55%);
+        }
+
+        .hero h1 {
+            font-size: 45px;
+            color: #d4af37;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            color: #cccccc;
+            max-width: 700px;
+            margin: auto;
+            line-height: 1.7;
+            font-size: 17px;
+        }
+
+        /* COURSE SECTION */
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            margin: 25px 0 35px;
+        }
+
+        .section-title h2 {
+            color: #d4af37;
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+
+        .section-title p {
+            color: #aaa;
+        }
+
+        /* COURSE GRID */
+        .course-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .course-card {
+            background: #111111;
+            border: 1px solid #292929;
+            border-radius: 15px;
+            overflow: hidden;
+            transition: 0.3s;
+        }
+
+        .course-card:hover {
+            transform: translateY(-7px);
+            border-color: #d4af37;
+            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.15);
+        }
+
+        /* COURSE THUMBNAIL */
+        .course-thumb {
+            height: 180px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background:
+                linear-gradient(135deg, #171717, #30260d);
+            border-bottom: 1px solid #292929;
+            position: relative;
+        }
+
+        .course-icon {
+            font-size: 65px;
+        }
+
+        .course-number {
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            background: #d4af37;
+            color: #000;
+            padding: 6px 10px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        .course-content {
+            padding: 22px;
+        }
+
+        .course-content h3 {
+            color: #d4af37;
+            font-size: 21px;
+            margin-bottom: 10px;
+        }
+
+        .course-content p {
+            color: #bdbdbd;
+            line-height: 1.6;
+            font-size: 14px;
+            min-height: 68px;
+        }
+
+        .course-btn {
+            display: block;
+            margin-top: 18px;
+            text-align: center;
+            text-decoration: none;
+            background: #d4af37;
+            color: #000;
+            padding: 11px;
+            border-radius: 7px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .course-btn:hover {
+            background: #ffffff;
+        }
+
+        /* TELEGRAM BOX */
+        .telegram-box {
+            margin: 55px auto 20px;
+            max-width: 850px;
+            background: #111111;
+            border: 1px solid #d4af37;
+            border-radius: 15px;
+            padding: 30px 20px;
+            text-align: center;
+        }
+
+        .telegram-box h2 {
+            color: #d4af37;
+            margin-bottom: 12px;
+        }
+
+        .telegram-box p {
+            color: #bbbbbb;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .telegram-btn {
+            display: inline-block;
+            text-decoration: none;
+            background: #229ED9;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .telegram-btn:hover {
+            transform: scale(1.05);
+            background: #168ac0;
+        }
+
+        /* FOOTER */
+        footer {
+            margin-top: 60px;
+            padding: 30px 20px;
+            text-align: center;
+            border-top: 1px solid #292929;
+            background: #0d0d0d;
+        }
+
+        footer p {
+            color: #888;
+            font-size: 14px;
+            line-height: 1.7;
+        }
+
+        footer span {
+            color: #d4af37;
+        }
+
+        /* TABLET */
+        @media (max-width: 900px) {
+
+            .course-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            nav {
+                gap: 2px;
+            }
+
+            nav a {
+                padding: 8px;
+                font-size: 13px;
+            }
+        }
+
+        /* MOBILE */
+        @media (max-width: 700px) {
+
+            .header-box {
+                padding: 10px 15px;
+            }
+
+            .logo-text {
+                font-size: 15px;
+            }
+
+            .logo-box img {
+                width: 45px;
+                height: 45px;
+            }
+
+            .menu-btn {
+                display: block;
+            }
+
+            nav {
+                display: none;
+                position: absolute;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                background: #0d0d0d;
+                flex-direction: column;
+                padding: 15px;
+                border-bottom: 1px solid #d4af37;
+            }
+
+            nav.active {
+                display: flex;
+            }
+
+            nav a {
+                width: 100%;
+                text-align: center;
+                padding: 12px;
+            }
+
+            .hero {
+                padding: 50px 15px 35px;
+            }
+
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .hero p {
+                font-size: 15px;
+            }
+
+            .course-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .course-thumb {
+                height: 170px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+
+        <div class="header-box">
+
+            <div class="logo-box">
+
+                <img src="logo.png" alt="ZACK EXPLAIN BY SHTTY Logo">
+
+                <div class="logo-text">
+                    ZACK EXPLAIN BY SHTTY
+                </div>
+
+            </div>
+
+            <div class="menu-btn" onclick="toggleMenu()">
+                ☰
+            </div>
+
+            <nav id="navMenu">
+
+                <a href="index.html">Home</a>
+
+                <a href="short-videos.html">
+                    Short Videos
+                </a>
+
+                <a href="drama.html">
+                    Drama
+                </a>
+
+                <a href="movie.html">
+                    Movies
+                </a>
+
+                <a href="popular.html">
+                    Popular
+                </a>
+
+                <a href="course.html" class="active">
+                    Course
+                </a>
+
+                <a href="gallery.html">
+                    Gallery
+                </a>
+
+                <a href="about.html">
+                    About
+                </a>
+
+                <a href="contact.html">
+                    Contact
+                </a>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <!-- HERO -->
+    <section class="hero">
+
+        <h1>🎓 Our Courses</h1>
+
+        <p>
+            ZACK EXPLAIN BY SHTTY पर Computer, Website,
+            AI, Video Editing और YouTube से जुड़ी
+            useful skills सीखें।
+        </p>
+
+    </section>
+
+
+    <!-- COURSES -->
+    <main class="container">
+
+        <div class="section-title">
+
+            <h2>Learning Courses</h2>
+
+            <p>
+                अपनी पसंद का course चुनें और सीखना शुरू करें।
+            </p>
+
+        </div>
+
+
+        <div class="course-grid">
+
+
+            <!-- COURSE 1 -->
+            <div class="course-card">
+
+                <div class="course-thumb">
+
+                    <span class="course-number">
+                        COURSE 01
+                    </span>
+
+                    <div class="course-icon">
+                        💻
+                    </div>
+
+                </div>
+
+                <div class="course-content">
+
+                    <h3>
+                        Computer Basics
+                    </h3>
+
+                    <p>
+                        Computer चलाना, keyboard,
+                        mouse, files, folders और
+                        basic computer skills सीखें।
+                    </p>
+
+                    <a href="https://t.me/zackXplain"
+                       target="_blank"
+                       class="course-btn">
+                        Start Learning →
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- COURSE 2 -->
+            <div class="course-card">
+
+                <div class="course-thumb">
+
+                    <span class="course-number">
+                        COURSE 02
+                    </span>
+
+                    <div class="course-icon">
+                        🌐
+                    </div>
+
+                </div>
+
+                <div class="course-content">
+
+                    <h3>
+                        Website Development
+                    </h3>
+
+                    <p>
+                        HTML, CSS और basic website
+                        development सीखें और
+                        अपनी website बनाएं।
+                    </p>
+
+                    <a href="https://t.me/zackXplain"
+                       target="_blank"
+                       class="course-btn">
+                        Start Learning →
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- COURSE 3 -->
+            <div class="course-card">
+
+                <div class="course-thumb">
+
+                    <span class="course-number">
+                        COURSE 03
+                    </span>
+
+                    <div class="course-icon">
+                        🤖
+                    </div>
+
+                </div>
+
+                <div class="course-content">
+
+                    <h3>
+                        AI Basics
+                    </h3>
+
+                    <p>
+                        Artificial Intelligence और
+                        AI tools का basic इस्तेमाल
+                        आसान तरीके से सीखें।
+                    </p>
+
+                    <a href="https://t.me/zackXplain"
+                       target="_blank"
+                       class="course-btn">
+                        Start Learning →
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- COURSE 4 -->
+            <div class="course-card">
+
+                <div class="course-thumb">
+
+                    <span class="course-number">
+                        COURSE 04
+                    </span>
+
+                    <div class="course-icon">
+                        🎬
+                    </div>
+
+                </div>
+
+                <div class="course-content">
+
+                    <h3>
+                        Video Editing
+                    </h3>
+
+                    <p>
+                        Short videos और YouTube
+                        videos के लिए basic
+                        video editing skills सीखें।
+                    </p>
+
+                    <a href="https://t.me/zackXplain"
+                       target="_blank"
+                       class="course-btn">
+                        Start Learning →
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- COURSE 5 -->
+            <div class="course-card">
+
+                <div class="course-thumb">
+
+                    <span class="course-number">
+                        COURSE 05
+                    </span>
+
+                    <div class="course-icon">
+                        ▶️
+                    </div>
+
+                </div>
+
+                <div class="course-content">
+
+                    <h3>
+                        YouTube Basics
+                    </h3>
+
+                    <p>
+                        YouTube channel setup,
+                        Shorts, videos और
+                        basic creator skills सीखें।
+                    </p>
+
+                    <a href="https://t.me/zackXplain"
+                       target="_blank"
+                       class="course-btn">
+                        Start Learning →
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- COURSE 6 -->
+            <div class="course-card">
+
+                <div class="course-thumb">
+
+                    <span class="course-number">
+                        COURSE 06
+                    </span>
+
+                    <div class="course-icon">
+                        🚀
+                    </div>
+
+                </div>
+
+                <div class="course-content">
+
+                    <h3>
+                        Digital Skills
+                    </h3>
+
+                    <p>
+                        Internet, online tools,
+                        digital work और useful
+                        technology skills सीखें।
+                    </p>
+
+                    <a href="https://t.me/zackXplain"
+                       target="_blank"
+                       class="course-btn">
+                        Start Learning →
+                    </a>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+        <!-- TELEGRAM -->
+        <div class="telegram-box">
+
+            <h2>
+                📢 Join Our Telegram
+            </h2>
+
+            <p>
+                Course updates, new videos और
+                important information पाने के लिए
+                हमारे Telegram channel से जुड़ें।
+            </p>
+
+            <a href="https://t.me/zackXplain"
+               target="_blank"
+               class="telegram-btn">
+                ✈️ Join Telegram
+            </a>
+
+        </div>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <p>
+            © 2026
+            <span>ZACK EXPLAIN BY SHTTY</span>
+            — All Rights Reserved.
+        </p>
+
+        <p>
+            Learn • Explore • Create 🚀
+        </p>
+
+    </footer>
+
+
+    <!-- MOBILE MENU SCRIPT -->
+    <script>
+
+        function toggleMenu() {
+
+            document
+                .getElementById("navMenu")
+                .classList
+                .toggle("active");
+
+        }
+
+    </script>
+
+</body>
+</html>

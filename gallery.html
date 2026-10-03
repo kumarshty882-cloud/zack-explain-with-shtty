@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Gallery | ZACK EXPLAIN BY SHTTY</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #080808;
+            color: white;
+        }
+
+        header {
+            background: #0d0d0d;
+            border-bottom: 1px solid #d4af37;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-box {
+            max-width: 1200px;
+            margin: auto;
+            padding: 12px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo-box {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo-box img {
+            width: 52px;
+            height: 52px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #d4af37;
+        }
+
+        .logo-text {
+            color: #d4af37;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        nav {
+            display: flex;
+            gap: 5px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 9px 11px;
+            border-radius: 6px;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        nav a:hover,
+        nav a.active {
+            background: #d4af37;
+            color: #000;
+        }
+
+        .menu-btn {
+            display: none;
+            color: #d4af37;
+            font-size: 28px;
+            cursor: pointer;
+        }
+
+        /* HERO */
+
+        .hero {
+            min-height: 75vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 30px 20px;
+
+            background:
+                radial-gradient(circle at center, #241d08 0%, #080808 55%);
+        }
+
+        .coming-box {
+            max-width: 750px;
+            padding: 50px 30px;
+            border: 1px solid #d4af37;
+            border-radius: 20px;
+            background: rgba(17, 17, 17, 0.9);
+            box-shadow: 0 0 40px rgba(212, 175, 55, 0.12);
+        }
+
+        .gallery-icon {
+            font-size: 75px;
+            margin-bottom: 20px;
+        }
+
+        .coming-box h1 {
+            color: #d4af37;
+            font-size: 45px;
+            margin-bottom: 15px;
+        }
+
+        .coming-box h2 {
+            font-size: 25px;
+            margin-bottom: 15px;
+        }
+
+        .coming-box p {
+            color: #bdbdbd;
+            line-height: 1.8;
+            font-size: 17px;
+        }
+
+        .highlight {
+            color: #d4af37;
+            font-weight: bold;
+        }
+
+        .telegram-btn {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 13px 25px;
+            background: #229ED9;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .telegram-btn:hover {
+            transform: scale(1.05);
+        }
+
+        /* FOOTER */
+
+        footer {
+            text-align: center;
+            padding: 30px 20px;
+            background: #0d0d0d;
+            border-top: 1px solid #292929;
+        }
+
+        footer p {
+            color: #888;
+            line-height: 1.7;
+        }
+
+        footer span {
+            color: #d4af37;
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 700px) {
+
+            .logo-box img {
+                width: 45px;
+                height: 45px;
+            }
+
+            .logo-text {
+                font-size: 14px;
+            }
+
+            .menu-btn {
+                display: block;
+            }
+
+            nav {
+                display: none;
+                position: absolute;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                background: #0d0d0d;
+                flex-direction: column;
+                padding: 15px;
+                border-bottom: 1px solid #d4af37;
+            }
+
+            nav.active {
+                display: flex;
+            }
+
+            nav a {
+                width: 100%;
+                text-align: center;
+                padding: 12px;
+            }
+
+            .coming-box {
+                padding: 40px 20px;
+            }
+
+            .gallery-icon {
+                font-size: 60px;
+            }
+
+            .coming-box h1 {
+                font-size: 32px;
+            }
+
+            .coming-box h2 {
+                font-size: 21px;
+            }
+
+            .coming-box p {
+                font-size: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+
+    <header>
+
+        <div class="header-box">
+
+            <div class="logo-box">
+
+                <img src="logo.png" alt="ZACK EXPLAIN BY SHTTY">
+
+                <div class="logo-text">
+                    ZACK EXPLAIN BY SHTTY
+                </div>
+
+            </div>
+
+            <div class="menu-btn" onclick="toggleMenu()">
+                ☰
+            </div>
+
+            <nav id="navMenu">
+
+                <a href="index.html">Home</a>
+
+                <a href="short-videos.html">
+                    Short Videos
+                </a>
+
+                <a href="drama.html">
+                    Drama
+                </a>
+
+                <a href="movie.html">
+                    Movies
+                </a>
+
+                <a href="popular.html">
+                    Popular
+                </a>
+
+                <a href="course.html">
+                    Course
+                </a>
+
+                <a href="gallery.html" class="active">
+                    Gallery
+                </a>
+
+                <a href="about.html">
+                    About
+                </a>
+
+                <a href="contact.html">
+                    Contact
+                </a>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <!-- COMING SOON -->
+
+    <section class="hero">
+
+        <div class="coming-box">
+
+            <div class="gallery-icon">
+                🖼️
+            </div>
+
+            <h1>
+                Coming Soon
+            </h1>
+
+            <h2>
+                Gallery जल्द ही आ रही है!
+            </h2>
+
+            <p>
+                हमारी Gallery में जल्द ही
+                <span class="highlight">
+                    नई Photos, Videos, Posters
+                </span>
+                और बहुत सारी नई जानकारी
+                देखने को मिलेगी।
+            </p>
+
+            <p style="margin-top: 15px;">
+                जुड़े रहिए <b>ZACK EXPLAIN BY SHTTY</b> के साथ।
+                <br>
+                <span class="highlight">
+                    जल्द ही जानकारी आपको मिलेगी। 🚀
+                </span>
+            </p>
+
+            <a
+                href="https://t.me/zackXplain"
+                target="_blank"
+                class="telegram-btn">
+                ✈️ Telegram पर जुड़ें
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <p>
+            © 2026
+            <span>ZACK EXPLAIN BY SHTTY</span>
+            — All Rights Reserved.
+        </p>
+
+        <p>
+            Learn • Explore • Create 🚀
+        </p>
+
+    </footer>
+
+
+    <script>
+
+        function toggleMenu() {
+
+            document
+                .getElementById("navMenu")
+                .classList
+                .toggle("active");
+
+        }
+
+    </script>
+
+</body>
+</html>

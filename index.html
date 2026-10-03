@@ -1,0 +1,1125 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ZACK EXPLAIN BY SHTTY | Official Website</title>
+
+    <meta name="description"
+        content="ZACK EXPLAIN BY SHTTY - Short Videos, Drama, Movies, Popular Videos, Courses, Gallery and latest updates.">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #080808;
+            color: #ffffff;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* ================= HEADER ================= */
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 999;
+            background: rgba(8, 8, 8, 0.96);
+            border-bottom: 1px solid #d4af37;
+            backdrop-filter: blur(10px);
+        }
+
+        .navbar {
+            max-width: 1200px;
+            margin: auto;
+            min-height: 75px;
+            padding: 10px 20px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .brand img {
+            width: 52px;
+            height: 52px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #d4af37;
+        }
+
+        .brand-text {
+            font-size: 19px;
+            font-weight: bold;
+            color: #d4af37;
+            letter-spacing: 1px;
+        }
+
+        .nav-menu {
+            display: flex;
+            align-items: center;
+            gap: 7px;
+            flex-wrap: wrap;
+        }
+
+        .nav-menu a {
+            padding: 8px 10px;
+            border-radius: 8px;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        .nav-menu a:hover {
+            color: #000;
+            background: #d4af37;
+        }
+
+        .menu-btn {
+            display: none;
+            font-size: 28px;
+            color: #d4af37;
+            cursor: pointer;
+        }
+
+        /* ================= HERO ================= */
+
+        .hero {
+            min-height: 650px;
+            padding: 90px 20px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            text-align: center;
+
+            background:
+                radial-gradient(circle at top, rgba(212,175,55,0.18), transparent 40%),
+                linear-gradient(180deg, #111111, #080808);
+        }
+
+        .hero-content {
+            max-width: 850px;
+        }
+
+        .hero-logo {
+            width: 125px;
+            height: 125px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 3px solid #d4af37;
+            margin-bottom: 25px;
+            box-shadow: 0 0 35px rgba(212,175,55,0.25);
+        }
+
+        .hero h1 {
+            font-size: clamp(36px, 7vw, 72px);
+            line-height: 1.1;
+            margin-bottom: 20px;
+        }
+
+        .gold {
+            color: #d4af37;
+        }
+
+        .hero p {
+            max-width: 680px;
+            margin: auto;
+            color: #cccccc;
+            font-size: 18px;
+        }
+
+        .hero-buttons {
+            margin-top: 32px;
+
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 13px 25px;
+            border-radius: 30px;
+            font-weight: bold;
+            transition: 0.3s;
+            border: 1px solid #d4af37;
+        }
+
+        .btn-gold {
+            background: #d4af37;
+            color: #000;
+        }
+
+        .btn-dark {
+            background: transparent;
+            color: #d4af37;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(212,175,55,0.2);
+        }
+
+        /* ================= SECTIONS ================= */
+
+        section {
+            padding: 75px 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        .section-title h2 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        .section-title p {
+            color: #aaa;
+        }
+
+        /* ================= CARDS ================= */
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .card {
+            background: #111111;
+            border: 1px solid #292929;
+            border-radius: 16px;
+            padding: 28px 20px;
+            text-align: center;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-7px);
+            border-color: #d4af37;
+            box-shadow: 0 12px 35px rgba(0,0,0,0.4);
+        }
+
+        .card-icon {
+            font-size: 42px;
+            margin-bottom: 15px;
+        }
+
+        .card h3 {
+            color: #d4af37;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            color: #aaa;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        .card-btn {
+            display: inline-block;
+            padding: 9px 17px;
+            border: 1px solid #d4af37;
+            border-radius: 20px;
+            color: #d4af37;
+            font-size: 13px;
+            transition: 0.3s;
+        }
+
+        .card-btn:hover {
+            background: #d4af37;
+            color: #000;
+        }
+
+        /* ================= FEATURE ================= */
+
+        .feature {
+            background: #0d0d0d;
+        }
+
+        .feature-box {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            align-items: center;
+        }
+
+        .feature-text h2 {
+            font-size: 38px;
+            margin-bottom: 18px;
+        }
+
+        .feature-text p {
+            color: #aaa;
+            margin-bottom: 15px;
+        }
+
+        .feature-list {
+            margin: 20px 0;
+            list-style: none;
+        }
+
+        .feature-list li {
+            margin: 10px 0;
+            color: #ddd;
+        }
+
+        .feature-list li::before {
+            content: "✓";
+            color: #d4af37;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        .feature-box-right {
+            background: linear-gradient(145deg, #161616, #0c0c0c);
+            border: 1px solid #333;
+            border-radius: 20px;
+            padding: 45px 25px;
+            text-align: center;
+        }
+
+        .feature-box-right .big-icon {
+            font-size: 80px;
+            margin-bottom: 15px;
+        }
+
+        /* ================= SHORTS ================= */
+
+        .short-preview {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .short-card {
+            overflow: hidden;
+            background: #111;
+            border-radius: 15px;
+            border: 1px solid #292929;
+        }
+
+        .short-thumb {
+            aspect-ratio: 16 / 9;
+            background: linear-gradient(135deg, #222, #111);
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            font-size: 55px;
+        }
+
+        .short-info {
+            padding: 18px;
+        }
+
+        .short-info h3 {
+            margin-bottom: 12px;
+        }
+
+        /* ================= COMING SOON ================= */
+
+        .coming {
+            text-align: center;
+            padding: 55px 25px;
+            background: linear-gradient(145deg, #151515, #0d0d0d);
+            border: 1px solid #d4af37;
+            border-radius: 20px;
+        }
+
+        .coming-icon {
+            font-size: 55px;
+            margin-bottom: 15px;
+        }
+
+        .coming h2 {
+            color: #d4af37;
+            margin-bottom: 10px;
+        }
+
+        .coming p {
+            color: #aaa;
+            max-width: 650px;
+            margin: auto auto 25px;
+        }
+
+        /* ================= SOCIAL ================= */
+
+        .social {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-top: 25px;
+        }
+
+        .social a {
+            padding: 12px 22px;
+            border: 1px solid #333;
+            border-radius: 25px;
+            transition: 0.3s;
+        }
+
+        .social a:hover {
+            border-color: #d4af37;
+            color: #d4af37;
+            transform: translateY(-3px);
+        }
+
+        /* ================= FOOTER ================= */
+
+        footer {
+            border-top: 1px solid #292929;
+            background: #050505;
+            padding: 40px 20px 25px;
+            text-align: center;
+        }
+
+        footer img {
+            width: 65px;
+            height: 65px;
+            border-radius: 50%;
+            border: 2px solid #d4af37;
+            margin-bottom: 12px;
+        }
+
+        footer h3 {
+            color: #d4af37;
+            margin-bottom: 10px;
+        }
+
+        footer p {
+            color: #888;
+            font-size: 14px;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 18px;
+            flex-wrap: wrap;
+            margin: 20px 0;
+        }
+
+        .footer-links a {
+            color: #aaa;
+            font-size: 14px;
+        }
+
+        .footer-links a:hover {
+            color: #d4af37;
+        }
+
+        .copyright {
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid #1e1e1e;
+        }
+
+        /* ================= RESPONSIVE ================= */
+
+        @media (max-width: 1000px) {
+
+            .cards {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .nav-menu {
+                gap: 2px;
+            }
+        }
+
+        @media (max-width: 750px) {
+
+            .navbar {
+                min-height: 68px;
+            }
+
+            .menu-btn {
+                display: block;
+            }
+
+            .nav-menu {
+                display: none;
+                position: absolute;
+                top: 68px;
+                left: 0;
+                width: 100%;
+                background: #080808;
+                border-bottom: 1px solid #d4af37;
+
+                flex-direction: column;
+                padding: 15px;
+            }
+
+            .nav-menu.active {
+                display: flex;
+            }
+
+            .nav-menu a {
+                width: 100%;
+                text-align: center;
+                padding: 12px;
+            }
+
+            .brand-text {
+                font-size: 15px;
+            }
+
+            .hero {
+                min-height: 570px;
+                padding: 70px 18px;
+            }
+
+            .hero-logo {
+                width: 105px;
+                height: 105px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            .feature-box {
+                grid-template-columns: 1fr;
+            }
+
+            .short-preview {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 550px) {
+
+            section {
+                padding: 55px 15px;
+            }
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+
+            .section-title h2 {
+                font-size: 30px;
+            }
+
+            .feature-text h2 {
+                font-size: 30px;
+            }
+
+            .brand img {
+                width: 45px;
+                height: 45px;
+            }
+
+            .brand-text {
+                font-size: 13px;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .btn {
+                width: 90%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+
+<header>
+    <nav class="navbar">
+
+        <a href="index.html" class="brand">
+            <img src="logo.png" alt="ZACK EXPLAIN BY SHTTY Logo">
+            <span class="brand-text">ZACK EXPLAIN BY SHTTY</span>
+        </a>
+
+        <div class="menu-btn" onclick="toggleMenu()">☰</div>
+
+        <div class="nav-menu" id="navMenu">
+
+            <a href="index.html">Home</a>
+            <a href="short-videos.html">Short Videos</a>
+            <a href="drama.html">Drama</a>
+            <a href="movie.html">Movies</a>
+            <a href="popular.html">Popular</a>
+            <a href="course.html">Course</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+
+        </div>
+
+    </nav>
+</header>
+
+
+<!-- ================= HERO ================= -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <img
+            src="logo.png"
+            alt="ZACK EXPLAIN BY SHTTY"
+            class="hero-logo"
+        >
+
+        <h1>
+            Welcome to
+            <span class="gold">ZACK EXPLAIN</span>
+        </h1>
+
+        <p>
+            BY SHTTY
+        </p>
+
+        <p style="margin-top:15px;">
+            Short Videos, Drama, Movies, Popular Videos,
+            Courses और आने वाली नई जानकारी — सब एक ही जगह।
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="short-videos.html" class="btn btn-gold">
+                ▶ Watch Shorts
+            </a>
+
+            <a href="course.html" class="btn btn-dark">
+                📚 Explore Courses
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= EXPLORE ================= -->
+
+<section>
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>
+                Explore <span class="gold">ZACK EXPLAIN</span>
+            </h2>
+
+            <p>
+                अपनी पसंद का content चुनें
+            </p>
+
+        </div>
+
+
+        <div class="cards">
+
+            <div class="card">
+
+                <div class="card-icon">🎬</div>
+
+                <h3>Short Videos</h3>
+
+                <p>
+                    हमारे selected short videos देखें।
+                </p>
+
+                <a href="short-videos.html" class="card-btn">
+                    Watch Now
+                </a>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="card-icon">🎭</div>
+
+                <h3>Drama</h3>
+
+                <p>
+                    Drama से जुड़ा interesting content।
+                </p>
+
+                <a href="drama.html" class="card-btn">
+                    Explore
+                </a>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="card-icon">🎥</div>
+
+                <h3>Movies</h3>
+
+                <p>
+                    Movies और entertainment videos।
+                </p>
+
+                <a href="movie.html" class="card-btn">
+                    Watch
+                </a>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="card-icon">🔥</div>
+
+                <h3>Popular</h3>
+
+                <p>
+                    Popular और interesting videos।
+                </p>
+
+                <a href="popular.html" class="card-btn">
+                    View
+                </a>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="card-icon">📚</div>
+
+                <h3>Courses</h3>
+
+                <p>
+                    नई skills सीखने के लिए courses।
+                </p>
+
+                <a href="course.html" class="card-btn">
+                    Start
+                </a>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="card-icon">🖼️</div>
+
+                <h3>Gallery</h3>
+
+                <p>
+                    Photos और आने वाले updates।
+                </p>
+
+                <a href="gallery.html" class="card-btn">
+                    Open
+                </a>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="card-icon">ℹ️</div>
+
+                <h3>About</h3>
+
+                <p>
+                    ZACK EXPLAIN के बारे में जानें।
+                </p>
+
+                <a href="about.html" class="card-btn">
+                    Read More
+                </a>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="card-icon">📞</div>
+
+                <h3>Contact</h3>
+
+                <p>
+                    हमसे contact करने के लिए।
+                </p>
+
+                <a href="contact.html" class="card-btn">
+                    Contact
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= ABOUT FEATURE ================= -->
+
+<section class="feature">
+
+    <div class="container">
+
+        <div class="feature-box">
+
+            <div class="feature-text">
+
+                <h2>
+                    <span class="gold">ZACK EXPLAIN</span>
+                    BY SHTTY
+                </h2>
+
+                <p>
+                    ZACK EXPLAIN BY SHTTY एक ऐसी website है
+                    जहाँ entertainment, short videos और useful
+                    learning content को एक जगह लाने का प्रयास किया गया है।
+                </p>
+
+                <ul class="feature-list">
+
+                    <li>Short Videos</li>
+                    <li>Drama & Movies Content</li>
+                    <li>Popular Videos</li>
+                    <li>Learning Courses</li>
+                    <li>Future Updates</li>
+
+                </ul>
+
+                <a href="about.html" class="btn btn-gold">
+                    More About Us
+                </a>
+
+            </div>
+
+
+            <div class="feature-box-right">
+
+                <div class="big-icon">⭐</div>
+
+                <h2 class="gold">
+                    ZACK EXPLAIN
+                </h2>
+
+                <p style="color:#aaa; margin-top:10px;">
+                    Entertainment • Learning • Updates
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= SHORT PREVIEW ================= -->
+
+<section>
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>
+                Latest <span class="gold">Short Videos</span>
+            </h2>
+
+            <p>
+                हमारे latest Shorts explore करें।
+            </p>
+
+        </div>
+
+
+        <div class="short-preview">
+
+            <div class="short-card">
+
+                <div class="short-thumb">
+                    ▶️
+                </div>
+
+                <div class="short-info">
+
+                    <h3>Short Video #1</h3>
+
+                    <a
+                        href="https://youtube.com/shorts/s-548_zyleo"
+                        target="_blank"
+                        class="btn btn-gold"
+                    >
+                        Watch
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="short-card">
+
+                <div class="short-thumb">
+                    ▶️
+                </div>
+
+                <div class="short-info">
+
+                    <h3>Short Video #2</h3>
+
+                    <a
+                        href="https://youtube.com/shorts/iSiiwifAVB8"
+                        target="_blank"
+                        class="btn btn-gold"
+                    >
+                        Watch
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="short-card">
+
+                <div class="short-thumb">
+                    ▶️
+                </div>
+
+                <div class="short-info">
+
+                    <h3>Short Video #3</h3>
+
+                    <a
+                        href="https://youtube.com/shorts/ZahZXtPCB90"
+                        target="_blank"
+                        class="btn btn-gold"
+                    >
+                        Watch
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div style="text-align:center; margin-top:30px;">
+
+            <a href="short-videos.html" class="btn btn-dark">
+                View All Shorts →
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= COMING SOON ================= -->
+
+<section class="feature">
+
+    <div class="container">
+
+        <div class="coming">
+
+            <div class="coming-icon">
+                🚀
+            </div>
+
+            <h2>
+                Something New Is Coming Soon
+            </h2>
+
+            <p>
+                ZACK EXPLAIN BY SHTTY पर जल्द ही नई
+                जानकारी, नए videos और नए updates आने वाले हैं।
+            </p>
+
+            <a
+                href="https://t.me/zackXplain"
+                target="_blank"
+                class="btn btn-gold"
+            >
+                📢 Telegram पर जुड़ें
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= SOCIAL ================= -->
+
+<section>
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>
+                Connect With <span class="gold">Us</span>
+            </h2>
+
+            <p>
+                Latest updates के लिए जुड़े रहें।
+            </p>
+
+        </div>
+
+
+        <div class="social">
+
+            <a
+                href="https://t.me/zackXplain"
+                target="_blank"
+            >
+                ✈️ Telegram
+            </a>
+
+            <a
+                href="https://www.instagram.com/offx._shtty/"
+                target="_blank"
+            >
+                📸 Instagram
+            </a>
+
+            <a href="contact.html">
+                📞 Contact
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <img
+        src="logo.png"
+        alt="ZACK EXPLAIN BY SHTTY"
+    >
+
+    <h3>
+        ZACK EXPLAIN BY SHTTY
+    </h3>
+
+    <p>
+        Entertainment • Learning • Updates
+    </p>
+
+
+    <div class="footer-links">
+
+        <a href="index.html">Home</a>
+
+        <a href="short-videos.html">Short Videos</a>
+
+        <a href="drama.html">Drama</a>
+
+        <a href="movie.html">Movies</a>
+
+        <a href="popular.html">Popular</a>
+
+        <a href="course.html">Course</a>
+
+        <a href="gallery.html">Gallery</a>
+
+        <a href="about.html">About</a>
+
+        <a href="contact.html">Contact</a>
+
+    </div>
+
+
+    <div class="copyright">
+
+        <p>
+            © 2026 ZACK EXPLAIN BY SHTTY. All Rights Reserved.
+        </p>
+
+    </div>
+
+</footer>
+
+
+<!-- ================= JAVASCRIPT ================= -->
+
+<script>
+
+    function toggleMenu() {
+
+        const menu = document.getElementById("navMenu");
+
+        menu.classList.toggle("active");
+
+    }
+
+
+    document.querySelectorAll(".nav-menu a").forEach(function(link) {
+
+        link.addEventListener("click", function() {
+
+            document
+                .getElementById("navMenu")
+                .classList.remove("active");
+
+        });
+
+    });
+
+</script>
+
+</body>
+</html>

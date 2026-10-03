@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+```
+<meta name="description" content="ZACK EXPLAIN BY SHTTY - Drama Explain">
+
+<title>Drama Explain | ZACK EXPLAIN BY SHTTY</title>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        background: #070707;
+        color: #ffffff;
+        line-height: 1.6;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    /* HEADER */
+
+    header {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+
+        background: rgba(7,7,7,0.96);
+        border-bottom: 1px solid #292929;
+
+        backdrop-filter: blur(12px);
+    }
+
+    .navbar {
+        max-width: 1200px;
+        min-height: 75px;
+        margin: auto;
+        padding: 10px 20px;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+    }
+
+    .brand {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        color: #ffffff;
+    }
+
+    .brand img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 2px solid #d4af37;
+    }
+
+    .brand-name {
+        font-size: 16px;
+        font-weight: 800;
+    }
+
+    .brand-name span {
+        color: #d4af37;
+    }
+
+    nav {
+        display: flex;
+        gap: 22px;
+    }
+
+    nav a {
+        color: #dddddd;
+        font-size: 14px;
+        font-weight: 600;
+        transition: 0.3s;
+    }
+
+    nav a:hover {
+        color: #d4af37;
+    }
+
+    /* HERO */
+
+    .hero {
+        text-align: center;
+        padding: 75px 20px 55px;
+
+        background:
+            radial-gradient(
+                circle at center,
+                rgba(212,175,55,0.14),
+                transparent 40%
+            );
+    }
+
+    .hero-logo {
+        width: 115px;
+        height: 115px;
+        object-fit: cover;
+        border-radius: 50%;
+        border: 3px solid #d4af37;
+        margin-bottom: 20px;
+    }
+
+    .hero h1 {
+        font-size: clamp(38px, 6vw, 62px);
+        margin-bottom: 12px;
+    }
+
+    .gold {
+        color: #d4af37;
+    }
+
+    .hero p {
+        color: #999999;
+        font-size: 17px;
+    }
+
+    /* CONTENT */
+
+    .container {
+        max-width: 1150px;
+        margin: auto;
+        padding: 20px;
+    }
+
+    .intro {
+        text-align: center;
+        max-width: 750px;
+        margin: 0 auto 45px;
+    }
+
+    .intro h2 {
+        font-size: 32px;
+        margin-bottom: 12px;
+    }
+
+    .intro p {
+        color: #999999;
+    }
+
+    .drama-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 22px;
+        padding-bottom: 60px;
+    }
+
+    .drama-card {
+        background: #111111;
+        border: 1px solid #292929;
+        border-radius: 16px;
+        padding: 28px;
+        transition: 0.3s;
+    }
+
+    .drama-card:hover {
+        transform: translateY(-7px);
+        border-color: #d4af37;
+        box-shadow: 0 15px 35px rgba(0,0,0,0.35);
+    }
+
+    .icon {
+        width: 60px;
+        height: 60px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        background: rgba(212,175,55,0.12);
+        border: 1px solid rgba(212,175,55,0.3);
+
+        border-radius: 13px;
+        font-size: 28px;
+
+        margin-bottom: 20px;
+    }
+
+    .drama-card h3 {
+        font-size: 21px;
+        margin-bottom: 10px;
+    }
+
+    .drama-card p {
+        color: #999999;
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+
+    .coming {
+        display: inline-block;
+
+        padding: 9px 13px;
+
+        border-radius: 7px;
+
+        background: #1d1d1d;
+        color: #d4af37;
+
+        border: 1px solid #3b3b3b;
+
+        font-size: 13px;
+        font-weight: bold;
+    }
+
+    /* HOME */
+
+    .home-area {
+        text-align: center;
+        padding: 10px 20px 80px;
+    }
+
+    .home-btn {
+        display: inline-block;
+
+        border: 1px solid #d4af37;
+        color: #d4af37;
+
+        padding: 13px 24px;
+        border-radius: 9px;
+
+        font-weight: 700;
+
+        transition: 0.3s;
+    }
+
+    .home-btn:hover {
+        background: #d4af37;
+        color: #111111;
+    }
+
+    /* FOOTER */
+
+    footer {
+        border-top: 1px solid #292929;
+        background: #050505;
+        text-align: center;
+        padding: 32px 20px;
+    }
+
+    footer p {
+        color: #777777;
+        font-size: 14px;
+    }
+
+    footer strong {
+        color: #d4af37;
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 850px) {
+
+        .drama-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+    }
+
+    @media (max-width: 550px) {
+
+        .navbar {
+            padding: 10px 14px;
+        }
+
+        .brand-name {
+            font-size: 13px;
+        }
+
+        nav {
+            gap: 10px;
+        }
+
+        nav a {
+            font-size: 12px;
+        }
+
+        .hero {
+            padding: 55px 15px 40px;
+        }
+
+        .hero-logo {
+            width: 95px;
+            height: 95px;
+        }
+
+        .hero h1 {
+            font-size: 38px;
+        }
+
+        .hero p {
+            font-size: 14px;
+        }
+
+        .container {
+            padding: 15px;
+        }
+
+        .drama-grid {
+            grid-template-columns: 1fr;
+        }
+
+    }
+</style>
+```
+
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header>
+
+```
+<div class="navbar">
+
+    <a href="index.html" class="brand">
+
+        <img
+            src="logo.png"
+            alt="ZACK EXPLAIN BY SHTTY"
+        >
+
+        <div class="brand-name">
+            ZACK <span>EXPLAIN</span> BY SHTTY
+        </div>
+
+    </a>
+
+    <nav>
+
+        <a href="index.html">
+            Home
+        </a>
+
+        <a href="short-videos.html">
+            Shorts
+        </a>
+
+        <a href="drama.html">
+            Drama
+        </a>
+
+    </nav>
+
+</div>
+```
+
+</header>
+
+<!-- HERO -->
+
+<section class="hero">
+
+```
+<img
+    src="logo.png"
+    alt="ZACK EXPLAIN BY SHTTY"
+    class="hero-logo"
+>
+
+<h1>
+    Drama <span class="gold">Explain</span>
+</h1>
+
+<p>
+    Interesting Drama Stories और Explanations
+</p>
+```
+
+</section>
+
+<!-- CONTENT -->
+
+<main class="container">
+
+```
+<div class="intro">
+
+    <h2>
+        Drama <span class="gold">Collection</span>
+    </h2>
+
+    <p>
+        यहाँ आपको अलग-अलग dramas की interesting stories,
+        explanations और important details मिलेंगी।
+    </p>
+
+</div>
+
+
+<div class="drama-grid">
+
+
+    <!-- CARD 1 -->
+
+    <article class="drama-card">
+
+        <div class="icon">
+            🎭
+        </div>
+
+        <h3>
+            Drama Story 01
+        </h3>
+
+        <p>
+            Interesting drama story और उसका explanation.
+        </p>
+
+        <span class="coming">
+            Coming Soon
+        </span>
+
+    </article>
+
+
+    <!-- CARD 2 -->
+
+    <article class="drama-card">
+
+        <div class="icon">
+            🎬
+        </div>
+
+        <h3>
+            Drama Story 02
+        </h3>
+
+        <p>
+            Interesting drama story और उसका explanation.
+        </p>
+
+        <span class="coming">
+            Coming Soon
+        </span>
+
+    </article>
+
+
+    <!-- CARD 3 -->
+
+    <article class="drama-card">
+
+        <div class="icon">
+            📺
+        </div>
+
+        <h3>
+            Drama Story 03
+        </h3>
+
+        <p>
+            Interesting drama story और उसका explanation.
+        </p>
+
+        <span class="coming">
+            Coming Soon
+        </span>
+
+    </article>
+
+
+    <!-- CARD 4 -->
+
+    <article class="drama-card">
+
+        <div class="icon">
+            ⭐
+        </div>
+
+        <h3>
+            Drama Story 04
+        </h3>
+
+        <p>
+            Interesting drama story और उसका explanation.
+        </p>
+
+        <span class="coming">
+            Coming Soon
+        </span>
+
+    </article>
+
+
+    <!-- CARD 5 -->
+
+    <article class="drama-card">
+
+        <div class="icon">
+            🔥
+        </div>
+
+        <h3>
+            Drama Story 05
+        </h3>
+
+        <p>
+            Interesting drama story और उसका explanation.
+        </p>
+
+        <span class="coming">
+            Coming Soon
+        </span>
+
+    </article>
+
+
+    <!-- CARD 6 -->
+
+    <article class="drama-card">
+
+        <div class="icon">
+            🎥
+        </div>
+
+        <h3>
+            Drama Story 06
+        </h3>
+
+        <p>
+            Interesting drama story और उसका explanation.
+        </p>
+
+        <span class="coming">
+            Coming Soon
+        </span>
+
+    </article>
+
+
+</div>
+```
+
+</main>
+
+<!-- HOME BUTTON -->
+
+<div class="home-area">
+
+```
+<a
+    href="index.html"
+    class="home-btn"
+>
+    ← Back to Home
+</a>
+```
+
+</div>
+
+<!-- FOOTER -->
+
+<footer>
+
+```
+<p>
+    © 2026
+    <strong>ZACK EXPLAIN BY SHTTY</strong>
+    — All Rights Reserved.
+</p>
+```
+
+</footer>
+
+</body>
+</html>

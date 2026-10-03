@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Short Videos | ZACK EXPLAIN BY SHTTY</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #080808;
+            color: #fff;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* HEADER */
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(8,8,8,0.97);
+            border-bottom: 1px solid #d4af37;
+        }
+
+        .navbar {
+            max-width: 1200px;
+            margin: auto;
+            min-height: 72px;
+            padding: 10px 20px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .brand img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #d4af37;
+        }
+
+        .brand-name {
+            color: #d4af37;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        .menu-btn {
+            display: none;
+            font-size: 28px;
+            color: #d4af37;
+            cursor: pointer;
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 5px;
+            flex-wrap: wrap;
+        }
+
+        .nav-menu a {
+            padding: 8px 10px;
+            font-size: 14px;
+            border-radius: 7px;
+            transition: 0.3s;
+        }
+
+        .nav-menu a:hover {
+            background: #d4af37;
+            color: #000;
+        }
+
+        /* HERO */
+
+        .hero {
+            text-align: center;
+            padding: 75px 20px 55px;
+
+            background:
+                radial-gradient(
+                    circle at top,
+                    rgba(212,175,55,0.18),
+                    transparent 45%
+                );
+        }
+
+        .hero-logo {
+            width: 105px;
+            height: 105px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #d4af37;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+            font-size: clamp(35px, 6vw, 58px);
+            margin-bottom: 12px;
+        }
+
+        .gold {
+            color: #d4af37;
+        }
+
+        .hero p {
+            color: #aaa;
+            font-size: 17px;
+        }
+
+        /* CONTENT */
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            margin: 30px 0 40px;
+        }
+
+        .section-title h2 {
+            font-size: 32px;
+            margin-bottom: 8px;
+        }
+
+        .section-title p {
+            color: #999;
+        }
+
+        /* VIDEO GRID */
+
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            padding-bottom: 70px;
+        }
+
+        .video-card {
+            background: #111;
+            border: 1px solid #292929;
+            border-radius: 16px;
+            overflow: hidden;
+            transition: 0.3s;
+        }
+
+        .video-card:hover {
+            transform: translateY(-7px);
+            border-color: #d4af37;
+            box-shadow: 0 12px 35px rgba(0,0,0,0.5);
+        }
+
+        .thumbnail {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            overflow: hidden;
+            background: #181818;
+        }
+
+        .thumbnail img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: 0.4s;
+        }
+
+        .video-card:hover .thumbnail img {
+            transform: scale(1.06);
+        }
+
+        .play-button {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+
+            transform: translate(-50%, -50%);
+
+            width: 65px;
+            height: 65px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            background: rgba(0,0,0,0.78);
+            border: 2px solid #d4af37;
+            border-radius: 50%;
+
+            color: #d4af37;
+            font-size: 25px;
+
+            transition: 0.3s;
+        }
+
+        .video-card:hover .play-button {
+            background: #d4af37;
+            color: #000;
+            transform:
+                translate(-50%, -50%)
+                scale(1.1);
+        }
+
+        .video-info {
+            padding: 18px;
+        }
+
+        .video-info h3 {
+            font-size: 18px;
+            margin-bottom: 8px;
+        }
+
+        .video-info p {
+            color: #888;
+            font-size: 13px;
+            margin-bottom: 15px;
+        }
+
+        .watch-btn {
+            display: inline-block;
+            padding: 10px 18px;
+            border-radius: 25px;
+
+            background: #d4af37;
+            color: #000;
+
+            font-weight: bold;
+            font-size: 13px;
+
+            transition: 0.3s;
+        }
+
+        .watch-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(212,175,55,0.25);
+        }
+
+        /* FOOTER */
+
+        footer {
+            border-top: 1px solid #292929;
+            background: #050505;
+            text-align: center;
+            padding: 35px 20px;
+        }
+
+        footer img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            border: 2px solid #d4af37;
+            margin-bottom: 10px;
+        }
+
+        footer h3 {
+            color: #d4af37;
+            margin-bottom: 8px;
+        }
+
+        footer p {
+            color: #777;
+            font-size: 13px;
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 900px) {
+
+            .video-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+        }
+
+        @media (max-width: 700px) {
+
+            .menu-btn {
+                display: block;
+            }
+
+            .nav-menu {
+                display: none;
+
+                position: absolute;
+                top: 72px;
+                left: 0;
+
+                width: 100%;
+
+                background: #080808;
+                border-bottom: 1px solid #d4af37;
+
+                flex-direction: column;
+                padding: 12px;
+            }
+
+            .nav-menu.active {
+                display: flex;
+            }
+
+            .nav-menu a {
+                width: 100%;
+                text-align: center;
+                padding: 12px;
+            }
+
+            .video-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .brand-name {
+                font-size: 13px;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header>
+
+    <nav class="navbar">
+
+        <a href="index.html" class="brand">
+
+            <img src="logo.png"
+                 alt="ZACK EXPLAIN BY SHTTY">
+
+            <span class="brand-name">
+                ZACK EXPLAIN BY SHTTY
+            </span>
+
+        </a>
+
+        <div class="menu-btn"
+             onclick="toggleMenu()">
+            ☰
+        </div>
+
+        <div class="nav-menu" id="navMenu">
+
+            <a href="index.html">Home</a>
+            <a href="short-videos.html">Short Videos</a>
+            <a href="drama.html">Drama</a>
+            <a href="movie.html">Movies</a>
+            <a href="popular.html">Popular</a>
+            <a href="course.html">Course</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+
+        </div>
+
+    </nav>
+
+</header>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+    <img
+        src="logo.png"
+        alt="ZACK EXPLAIN"
+        class="hero-logo"
+    >
+
+    <h1>
+        <span class="gold">Short</span> Videos
+    </h1>
+
+    <p>
+        ZACK EXPLAIN BY SHTTY के selected Shorts
+    </p>
+
+</section>
+
+
+<!-- VIDEOS -->
+
+<div class="container">
+
+    <div class="section-title">
+
+        <h2>
+            Latest <span class="gold">Shorts</span>
+        </h2>
+
+        <p>
+            Thumbnail पर click करें या Watch Now दबाएँ
+        </p>
+
+    </div>
+
+
+    <div class="video-grid">
+
+
+        <!-- 1 -->
+
+        <div class="video-card">
+
+            <a
+                href="https://youtube.com/shorts/s-548_zyleo"
+                target="_blank"
+                class="thumbnail"
+            >
+
+                <img
+                    src="https://i.ytimg.com/vi/s-548_zyleo/hqdefault.jpg"
+                    alt="Short Video 1"
+                >
+
+                <div class="play-button">
+                    ▶
+                </div>
+
+            </a>
+
+            <div class="video-info">
+
+                <h3>Short Video #1</h3>
+
+                <p>
+                    Watch this Short on YouTube.
+                </p>
+
+                <a
+                    href="https://youtube.com/shorts/s-548_zyleo"
+                    target="_blank"
+                    class="watch-btn"
+                >
+                    ▶ Watch Now
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- 2 -->
+
+        <div class="video-card">
+
+            <a
+                href="https://youtube.com/shorts/iSiiwifAVB8"
+                target="_blank"
+                class="thumbnail"
+            >
+
+                <img
+                    src="https://i.ytimg.com/vi/iSiiwifAVB8/hqdefault.jpg"
+                    alt="Short Video 2"
+                >
+
+                <div class="play-button">
+                    ▶
+                </div>
+
+            </a>
+
+            <div class="video-info">
+
+                <h3>Short Video #2</h3>
+
+                <p>
+                    Watch this Short on YouTube.
+                </p>
+
+                <a
+                    href="https://youtube.com/shorts/iSiiwifAVB8"
+                    target="_blank"
+                    class="watch-btn"
+                >
+                    ▶ Watch Now
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- 3 -->
+
+        <div class="video-card">
+
+            <a
+                href="https://youtube.com/shorts/ZahZXtPCB90"
+                target="_blank"
+                class="thumbnail"
+            >
+
+                <img
+                    src="https://i.ytimg.com/vi/ZahZXtPCB90/hqdefault.jpg"
+                    alt="Short Video 3"
+                >
+
+                <div class="play-button">
+                    ▶
+                </div>
+
+            </a>
+
+            <div class="video-info">
+
+                <h3>Short Video #3</h3>
+
+                <p>
+                    Watch this Short on YouTube.
+                </p>
+
+                <a
+                    href="https://youtube.com/shorts/ZahZXtPCB90"
+                    target="_blank"
+                    class="watch-btn"
+                >
+                    ▶ Watch Now
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- 4 -->
+
+        <div class="video-card">
+
+            <a
+                href="https://youtube.com/shorts/qCekcOmPmAc"
+                target="_blank"
+                class="thumbnail"
+            >
+
+                <img
+                    src="https://i.ytimg.com/vi/qCekcOmPmAc/hqdefault.jpg"
+                    alt="Short Video 4"
+                >
+
+                <div class="play-button">
+                    ▶
+                </div>
+
+            </a>
+
+            <div class="video-info">
+
+                <h3>Short Video #4</h3>
+
+                <p>
+                    Watch this Short on YouTube.
+                </p>
+
+                <a
+                    href="https://youtube.com/shorts/qCekcOmPmAc"
+                    target="_blank"
+                    class="watch-btn"
+                >
+                    ▶ Watch Now
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- 5 -->
+
+        <div class="video-card">
+
+            <a
+                href="https://youtube.com/shorts/rjDvPN6-JlI"
+                target="_blank"
+                class="thumbnail"
+            >
+
+                <img
+                    src="https://i.ytimg.com/vi/rjDvPN6-JlI/hqdefault.jpg"
+                    alt="Short Video 5"
+                >
+
+                <div class="play-button">
+                    ▶
+                </div>
+
+            </a>
+
+            <div class="video-info">
+
+                <h3>Short Video #5</h3>
+
+                <p>
+                    Watch this Short on YouTube.
+                </p>
+
+                <a
+                    href="https://youtube.com/shorts/rjDvPN6-JlI"
+                    target="_blank"
+                    class="watch-btn"
+                >
+                    ▶ Watch Now
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- 6 -->
+
+        <div class="video-card">
+
+            <a
+                href="https://youtube.com/shorts/UorRZQAf9wk"
+                target="_blank"
+                class="thumbnail"
+            >
+
+                <img
+                    src="https://i.ytimg.com/vi/UorRZQAf9wk/hqdefault.jpg"
+                    alt="Short Video 6"
+                >
+
+                <div class="play-button">
+                    ▶
+                </div>
+
+            </a>
+
+            <div class="video-info">
+
+                <h3>Short Video #6</h3>
+
+                <p>
+                    Watch this Short on YouTube.
+                </p>
+
+                <a
+                    href="https://youtube.com/shorts/UorRZQAf9wk"
+                    target="_blank"
+                    class="watch-btn"
+                >
+                    ▶ Watch Now
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- 7 -->
+
+        <div class="video-card">
+
+            <a
+                href="https://youtube.com/shorts/Jsydhe53hgE"
+                target="_blank"
+                class="thumbnail"
+            >
+
+                <img
+                    src="https://i.ytimg.com/vi/Jsydhe53hgE/hqdefault.jpg"
+                    alt="Short Video 7"
+                >
+
+                <div class="play-button">
+                    ▶
+                </div>
+
+            </a>
+
+            <div class="video-info">
+
+                <h3>Short Video #7</h3>
+
+                <p>
+                    Watch this Short on YouTube.
+                </p>
+
+                <a
+                    href="https://youtube.com/shorts/Jsydhe53hgE"
+                    target="_blank"
+                    class="watch-btn"
+                >
+                    ▶ Watch Now
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- 8 -->
+
+        <div class="video-card">
+
+            <a
+                href="https://youtube.com/shorts/zj-csGckbT0"
+                target="_blank"
+                class="thumbnail"
+            >
+
+                <img
+                    src="https://i.ytimg.com/vi/zj-csGckbT0/hqdefault.jpg"
+                    alt="Short Video 8"
+                >
+
+                <div class="play-button">
+                    ▶
+                </div>
+
+            </a>
+
+            <div class="video-info">
+
+                <h3>Short Video #8</h3>
+
+                <p>
+                    Watch this Short on YouTube.
+                </p>
+
+                <a
+                    href="https://youtube.com/shorts/zj-csGckbT0"
+                    target="_blank"
+                    class="watch-btn"
+                >
+                    ▶ Watch Now
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- 9 -->
+
+        <div class="video-card">
+
+            <a
+                href="https://youtube.com/shorts/umZg20TEzM8"
+                target="_blank"
+                class="thumbnail"
+            >
+
+                <img
+                    src="https://i.ytimg.com/vi/umZg20TEzM8/hqdefault.jpg"
+                    alt="Short Video 9"
+                >
+
+                <div class="play-button">
+                    ▶
+                </div>
+
+            </a>
+
+            <div class="video-info">
+
+                <h3>Short Video #9</h3>
+
+                <p>
+                    Watch this Short on YouTube.
+                </p>
+
+                <a
+                    href="https://youtube.com/shorts/umZg20TEzM8"
+                    target="_blank"
+                    class="watch-btn"
+                >
+                    ▶ Watch Now
+                </a>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</div>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <img
+        src="logo.png"
+        alt="ZACK EXPLAIN BY SHTTY"
+    >
+
+    <h3>
+        ZACK EXPLAIN BY SHTTY
+    </h3>
+
+    <p>
+        © 2026 ZACK EXPLAIN BY SHTTY. All Rights Reserved.
+    </p>
+
+</footer>
+
+
+<script>
+
+    function toggleMenu() {
+
+        document
+            .getElementById("navMenu")
+            .classList.toggle("active");
+
+    }
+
+</script>
+
+</body>
+</html>

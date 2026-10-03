@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contact | ZACK EXPLAIN BY SHTTY</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #080808;
+            color: #ffffff;
+            min-height: 100vh;
+        }
+
+        /* ================= HEADER ================= */
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: #0d0d0d;
+            border-bottom: 1px solid #d4af37;
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: auto;
+            min-height: 72px;
+            padding: 10px 20px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        /* LOGO */
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .brand img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #d4af37;
+        }
+
+        .brand-name {
+            color: #d4af37;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        /* NAV */
+
+        .nav-menu {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .nav-menu a {
+            color: #ffffff;
+            text-decoration: none;
+            padding: 9px 10px;
+            border-radius: 6px;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        .nav-menu a:hover,
+        .nav-menu a.active {
+            background: #d4af37;
+            color: #000000;
+        }
+
+        /* MOBILE MENU */
+
+        .menu-button {
+            display: none;
+            font-size: 28px;
+            color: #d4af37;
+            cursor: pointer;
+        }
+
+        /* ================= HERO ================= */
+
+        .hero {
+            text-align: center;
+            padding: 70px 20px 50px;
+
+            background:
+                radial-gradient(
+                    circle at top,
+                    #2b2208 0%,
+                    #080808 60%
+                );
+        }
+
+        .hero-icon {
+            font-size: 55px;
+            margin-bottom: 15px;
+        }
+
+        .hero h1 {
+            color: #d4af37;
+            font-size: 46px;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            max-width: 700px;
+            margin: auto;
+            color: #bbbbbb;
+            font-size: 17px;
+            line-height: 1.7;
+        }
+
+        /* ================= CONTACT SECTION ================= */
+
+        .contact-section {
+            max-width: 1000px;
+            margin: auto;
+            padding: 40px 20px 70px;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+        }
+
+        /* CARD */
+
+        .contact-card {
+            background: #111111;
+            border: 1px solid #292929;
+            border-radius: 16px;
+            padding: 32px 25px;
+            text-align: center;
+            transition: 0.3s;
+        }
+
+        .contact-card:hover {
+            transform: translateY(-7px);
+            border-color: #d4af37;
+            box-shadow:
+                0 12px 35px rgba(212, 175, 55, 0.12);
+        }
+
+        .card-icon {
+            font-size: 55px;
+            margin-bottom: 15px;
+        }
+
+        .contact-card h2 {
+            color: #d4af37;
+            font-size: 23px;
+            margin-bottom: 12px;
+        }
+
+        .contact-card p {
+            color: #bdbdbd;
+            font-size: 15px;
+            line-height: 1.7;
+            margin-bottom: 22px;
+        }
+
+        /* BUTTON */
+
+        .contact-button {
+            display: inline-block;
+            padding: 12px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .contact-button:hover {
+            transform: scale(1.05);
+        }
+
+        /* PHONE */
+
+        .phone-button {
+            background: #d4af37;
+            color: #000000;
+        }
+
+        .phone-button:hover {
+            background: #ffffff;
+            color: #000000;
+        }
+
+        /* WHATSAPP */
+
+        .whatsapp-button {
+            background: #25D366;
+            color: #ffffff;
+        }
+
+        .whatsapp-button:hover {
+            background: #ffffff;
+            color: #25D366;
+        }
+
+        /* TELEGRAM */
+
+        .telegram-button {
+            background: #229ED9;
+            color: #ffffff;
+        }
+
+        .telegram-button:hover {
+            background: #ffffff;
+            color: #229ED9;
+        }
+
+        /* INSTAGRAM */
+
+        .instagram-button {
+            background: #E1306C;
+            color: #ffffff;
+        }
+
+        .instagram-button:hover {
+            background: #ffffff;
+            color: #E1306C;
+        }
+
+        /* ================= INFO ================= */
+
+        .info-box {
+            margin-top: 30px;
+            padding: 30px 25px;
+            background: #111111;
+            border: 1px solid #d4af37;
+            border-radius: 16px;
+            text-align: center;
+        }
+
+        .info-box h2 {
+            color: #d4af37;
+            margin-bottom: 14px;
+        }
+
+        .info-box p {
+            color: #bbbbbb;
+            line-height: 1.8;
+        }
+
+        /* ================= FOOTER ================= */
+
+        footer {
+            background: #0d0d0d;
+            border-top: 1px solid #292929;
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        footer p {
+            color: #888888;
+            line-height: 1.8;
+            font-size: 14px;
+        }
+
+        footer .gold {
+            color: #d4af37;
+        }
+
+        /* ================= MOBILE ================= */
+
+        @media (max-width: 850px) {
+
+            .nav-menu {
+                gap: 2px;
+            }
+
+            .nav-menu a {
+                font-size: 12px;
+                padding: 8px;
+            }
+        }
+
+        @media (max-width: 700px) {
+
+            .header-container {
+                min-height: 68px;
+                padding: 8px 15px;
+            }
+
+            .brand img {
+                width: 44px;
+                height: 44px;
+            }
+
+            .brand-name {
+                font-size: 14px;
+            }
+
+            .menu-button {
+                display: block;
+            }
+
+            .nav-menu {
+                display: none;
+
+                position: absolute;
+                top: 68px;
+                left: 0;
+
+                width: 100%;
+
+                background: #0d0d0d;
+                border-bottom: 1px solid #d4af37;
+
+                padding: 12px;
+
+                flex-direction: column;
+            }
+
+            .nav-menu.show {
+                display: flex;
+            }
+
+            .nav-menu a {
+                width: 100%;
+                text-align: center;
+                padding: 12px;
+                font-size: 14px;
+            }
+
+            .hero {
+                padding: 55px 15px 40px;
+            }
+
+            .hero-icon {
+                font-size: 45px;
+            }
+
+            .hero h1 {
+                font-size: 34px;
+            }
+
+            .hero p {
+                font-size: 15px;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-section {
+                padding: 30px 15px 55px;
+            }
+
+            .contact-card {
+                padding: 28px 20px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header>
+
+        <div class="header-container">
+
+            <div class="brand">
+
+                <img
+                    src="logo.png"
+                    alt="ZACK EXPLAIN BY SHTTY Logo"
+                >
+
+                <div class="brand-name">
+                    ZACK EXPLAIN BY SHTTY
+                </div>
+
+            </div>
+
+
+            <div
+                class="menu-button"
+                onclick="toggleMenu()"
+            >
+                ☰
+            </div>
+
+
+            <nav
+                class="nav-menu"
+                id="navMenu"
+            >
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="short-videos.html">
+                    Short Videos
+                </a>
+
+                <a href="drama.html">
+                    Drama
+                </a>
+
+                <a href="movie.html">
+                    Movies
+                </a>
+
+                <a href="popular.html">
+                    Popular
+                </a>
+
+                <a href="course.html">
+                    Course
+                </a>
+
+                <a href="gallery.html">
+                    Gallery
+                </a>
+
+                <a href="about.html">
+                    About
+                </a>
+
+                <a
+                    href="contact.html"
+                    class="active"
+                >
+                    Contact
+                </a>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <!-- ================= HERO ================= -->
+
+    <section class="hero">
+
+        <div class="hero-icon">
+            📞
+        </div>
+
+        <h1>
+            Contact Us
+        </h1>
+
+        <p>
+            ZACK EXPLAIN BY SHTTY से जुड़ने,
+            जानकारी लेने और updates पाने के लिए
+            नीचे दिए गए options का इस्तेमाल करें।
+        </p>
+
+    </section>
+
+
+    <!-- ================= CONTACT ================= -->
+
+    <main class="contact-section">
+
+        <div class="contact-grid">
+
+
+            <!-- PHONE -->
+
+            <div class="contact-card">
+
+                <div class="card-icon">
+                    📱
+                </div>
+
+                <h2>
+                    Phone
+                </h2>
+
+                <p>
+                    किसी भी जरूरी जानकारी के लिए
+                    हमें सीधे फोन करें।
+                </p>
+
+                <a
+                    href="tel:9799854292"
+                    class="contact-button phone-button"
+                >
+                    📞 Call Now
+                </a>
+
+            </div>
+
+
+            <!-- WHATSAPP -->
+
+            <div class="contact-card">
+
+                <div class="card-icon">
+                    💬
+                </div>
+
+                <h2>
+                    WhatsApp
+                </h2>
+
+                <p>
+                    WhatsApp पर message भेजकर
+                    हमसे संपर्क करें।
+                </p>
+
+                <a
+                    href="https://wa.me/919799854292"
+                    target="_blank"
+                    class="contact-button whatsapp-button"
+                >
+                    💬 WhatsApp
+                </a>
+
+            </div>
+
+
+            <!-- TELEGRAM -->
+
+            <div class="contact-card">
+
+                <div class="card-icon">
+                    ✈️
+                </div>
+
+                <h2>
+                    Telegram
+                </h2>
+
+                <p>
+                    नई जानकारी, updates और
+                    announcements के लिए Telegram से जुड़ें।
+                </p>
+
+                <a
+                    href="https://t.me/zackXplain"
+                    target="_blank"
+                    class="contact-button telegram-button"
+                >
+                    ✈️ Join Telegram
+                </a>
+
+            </div>
+
+
+            <!-- INSTAGRAM -->
+
+            <div class="contact-card">
+
+                <div class="card-icon">
+                    📸
+                </div>
+
+                <h2>
+                    Instagram
+                </h2>
+
+                <p>
+                    Instagram पर हमें follow करें और
+                    नई posts और updates देखें।
+                </p>
+
+                <a
+                    href="https://www.instagram.com/offx._shtty/"
+                    target="_blank"
+                    class="contact-button instagram-button"
+                >
+                    📸 Follow Instagram
+                </a>
+
+            </div>
+
+
+        </div>
+
+
+        <!-- ================= INFO BOX ================= -->
+
+        <div class="info-box">
+
+            <h2>
+                🤝 हमसे जुड़े रहें
+            </h2>
+
+            <p>
+                ZACK EXPLAIN BY SHTTY पर जल्द ही
+                नई videos, courses, information और
+                बहुत कुछ आने वाला है।
+                <br><br>
+                नई जानकारी के लिए हमारे
+                Telegram और Instagram से जुड़े रहें। 🚀
+            </p>
+
+        </div>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <p>
+            © 2026
+            <span class="gold">
+                ZACK EXPLAIN BY SHTTY
+            </span>
+            — All Rights Reserved.
+        </p>
+
+        <p>
+            Learn • Explore • Create 🚀
+        </p>
+
+    </footer>
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+
+    <script>
+
+        function toggleMenu() {
+
+            const menu =
+                document.getElementById("navMenu");
+
+            menu.classList.toggle("show");
+
+        }
+
+    </script>
+
+</body>
+</html>
