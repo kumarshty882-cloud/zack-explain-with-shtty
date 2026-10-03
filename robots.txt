@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://neon-kringle-0b9d8e.netlify.app/sitemap.xml
