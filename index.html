@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- GOOGLE SEARCH CONSOLE VERIFICATION -->
+    <meta name="google-site-verification" content="bkhbzOfz-HjmcI9vETfD2Amz-OSTDt23O4ZKpiNETrU" />
+
     <title>ZACK EXPLAIN BY SHTTY | Official Website</title>
 
     <meta name="description"
@@ -29,8 +32,6 @@
             color: inherit;
         }
 
-        /* ================= HEADER ================= */
-
         header {
             position: sticky;
             top: 0;
@@ -45,7 +46,6 @@
             margin: auto;
             min-height: 75px;
             padding: 10px 20px;
-
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -99,20 +99,20 @@
             cursor: pointer;
         }
 
-        /* ================= HERO ================= */
-
         .hero {
             min-height: 650px;
             padding: 90px 20px;
-
             display: flex;
             align-items: center;
             justify-content: center;
-
             text-align: center;
 
             background:
-                radial-gradient(circle at top, rgba(212,175,55,0.18), transparent 40%),
+                radial-gradient(
+                    circle at top,
+                    rgba(212,175,55,0.18),
+                    transparent 40%
+                ),
                 linear-gradient(180deg, #111111, #080808);
         }
 
@@ -149,7 +149,6 @@
 
         .hero-buttons {
             margin-top: 32px;
-
             display: flex;
             justify-content: center;
             gap: 15px;
@@ -180,8 +179,6 @@
             box-shadow: 0 8px 25px rgba(212,175,55,0.2);
         }
 
-        /* ================= SECTIONS ================= */
-
         section {
             padding: 75px 20px;
         }
@@ -204,8 +201,6 @@
         .section-title p {
             color: #aaa;
         }
-
-        /* ================= CARDS ================= */
 
         .cards {
             display: grid;
@@ -259,8 +254,6 @@
             color: #000;
         }
 
-        /* ================= FEATURE ================= */
-
         .feature {
             background: #0d0d0d;
         }
@@ -312,8 +305,6 @@
             margin-bottom: 15px;
         }
 
-        /* ================= SHORTS ================= */
-
         .short-preview {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -330,11 +321,9 @@
         .short-thumb {
             aspect-ratio: 16 / 9;
             background: linear-gradient(135deg, #222, #111);
-
             display: flex;
             align-items: center;
             justify-content: center;
-
             font-size: 55px;
         }
 
@@ -345,8 +334,6 @@
         .short-info h3 {
             margin-bottom: 12px;
         }
-
-        /* ================= COMING SOON ================= */
 
         .coming {
             text-align: center;
@@ -372,8 +359,6 @@
             margin: auto auto 25px;
         }
 
-        /* ================= SOCIAL ================= */
-
         .social {
             display: flex;
             justify-content: center;
@@ -394,8 +379,6 @@
             color: #d4af37;
             transform: translateY(-3px);
         }
-
-        /* ================= FOOTER ================= */
 
         footer {
             border-top: 1px solid #292929;
@@ -445,8 +428,6 @@
             border-top: 1px solid #1e1e1e;
         }
 
-        /* ================= RESPONSIVE ================= */
-
         @media (max-width: 1000px) {
 
             .cards {
@@ -476,7 +457,6 @@
                 width: 100%;
                 background: #080808;
                 border-bottom: 1px solid #d4af37;
-
                 flex-direction: column;
                 padding: 15px;
             }
@@ -560,19 +540,34 @@
 
 <body>
 
-<!-- ================= HEADER ================= -->
-
 <header>
+
     <nav class="navbar">
 
         <a href="index.html" class="brand">
-            <img src="logo.png" alt="ZACK EXPLAIN BY SHTTY Logo">
-            <span class="brand-text">ZACK EXPLAIN BY SHTTY</span>
+
+            <img
+                src="logo.png"
+                alt="ZACK EXPLAIN BY SHTTY Logo"
+            >
+
+            <span class="brand-text">
+                ZACK EXPLAIN BY SHTTY
+            </span>
+
         </a>
 
-        <div class="menu-btn" onclick="toggleMenu()">☰</div>
+        <div
+            class="menu-btn"
+            onclick="toggleMenu()"
+        >
+            ☰
+        </div>
 
-        <div class="nav-menu" id="navMenu">
+        <div
+            class="nav-menu"
+            id="navMenu"
+        >
 
             <a href="index.html">Home</a>
             <a href="short-videos.html">Short Videos</a>
@@ -587,10 +582,9 @@
         </div>
 
     </nav>
+
 </header>
 
-
-<!-- ================= HERO ================= -->
 
 <section class="hero">
 
@@ -604,7 +598,9 @@
 
         <h1>
             Welcome to
-            <span class="gold">ZACK EXPLAIN</span>
+            <span class="gold">
+                ZACK EXPLAIN
+            </span>
         </h1>
 
         <p>
@@ -618,11 +614,17 @@
 
         <div class="hero-buttons">
 
-            <a href="short-videos.html" class="btn btn-gold">
+            <a
+                href="short-videos.html"
+                class="btn btn-gold"
+            >
                 ▶ Watch Shorts
             </a>
 
-            <a href="course.html" class="btn btn-dark">
+            <a
+                href="course.html"
+                class="btn btn-dark"
+            >
                 📚 Explore Courses
             </a>
 
@@ -633,8 +635,6 @@
 </section>
 
 
-<!-- ================= EXPLORE ================= -->
-
 <section>
 
     <div class="container">
@@ -642,7 +642,10 @@
         <div class="section-title">
 
             <h2>
-                Explore <span class="gold">ZACK EXPLAIN</span>
+                Explore
+                <span class="gold">
+                    ZACK EXPLAIN
+                </span>
             </h2>
 
             <p>
@@ -651,20 +654,24 @@
 
         </div>
 
-
         <div class="cards">
 
             <div class="card">
 
                 <div class="card-icon">🎬</div>
 
-                <h3>Short Videos</h3>
+                <h3>
+                    Short Videos
+                </h3>
 
                 <p>
                     हमारे selected short videos देखें।
                 </p>
 
-                <a href="short-videos.html" class="card-btn">
+                <a
+                    href="short-videos.html"
+                    class="card-btn"
+                >
                     Watch Now
                 </a>
 
@@ -675,13 +682,18 @@
 
                 <div class="card-icon">🎭</div>
 
-                <h3>Drama</h3>
+                <h3>
+                    Drama
+                </h3>
 
                 <p>
                     Drama से जुड़ा interesting content।
                 </p>
 
-                <a href="drama.html" class="card-btn">
+                <a
+                    href="drama.html"
+                    class="card-btn"
+                >
                     Explore
                 </a>
 
@@ -692,13 +704,18 @@
 
                 <div class="card-icon">🎥</div>
 
-                <h3>Movies</h3>
+                <h3>
+                    Movies
+                </h3>
 
                 <p>
                     Movies और entertainment videos।
                 </p>
 
-                <a href="movie.html" class="card-btn">
+                <a
+                    href="movie.html"
+                    class="card-btn"
+                >
                     Watch
                 </a>
 
@@ -709,13 +726,18 @@
 
                 <div class="card-icon">🔥</div>
 
-                <h3>Popular</h3>
+                <h3>
+                    Popular
+                </h3>
 
                 <p>
                     Popular और interesting videos।
                 </p>
 
-                <a href="popular.html" class="card-btn">
+                <a
+                    href="popular.html"
+                    class="card-btn"
+                >
                     View
                 </a>
 
@@ -726,13 +748,18 @@
 
                 <div class="card-icon">📚</div>
 
-                <h3>Courses</h3>
+                <h3>
+                    Courses
+                </h3>
 
                 <p>
                     नई skills सीखने के लिए courses।
                 </p>
 
-                <a href="course.html" class="card-btn">
+                <a
+                    href="course.html"
+                    class="card-btn"
+                >
                     Start
                 </a>
 
@@ -743,13 +770,18 @@
 
                 <div class="card-icon">🖼️</div>
 
-                <h3>Gallery</h3>
+                <h3>
+                    Gallery
+                </h3>
 
                 <p>
                     Photos और आने वाले updates।
                 </p>
 
-                <a href="gallery.html" class="card-btn">
+                <a
+                    href="gallery.html"
+                    class="card-btn"
+                >
                     Open
                 </a>
 
@@ -760,13 +792,18 @@
 
                 <div class="card-icon">ℹ️</div>
 
-                <h3>About</h3>
+                <h3>
+                    About
+                </h3>
 
                 <p>
                     ZACK EXPLAIN के बारे में जानें।
                 </p>
 
-                <a href="about.html" class="card-btn">
+                <a
+                    href="about.html"
+                    class="card-btn"
+                >
                     Read More
                 </a>
 
@@ -777,13 +814,18 @@
 
                 <div class="card-icon">📞</div>
 
-                <h3>Contact</h3>
+                <h3>
+                    Contact
+                </h3>
 
                 <p>
                     हमसे contact करने के लिए।
                 </p>
 
-                <a href="contact.html" class="card-btn">
+                <a
+                    href="contact.html"
+                    class="card-btn"
+                >
                     Contact
                 </a>
 
@@ -796,8 +838,6 @@
 </section>
 
 
-<!-- ================= ABOUT FEATURE ================= -->
-
 <section class="feature">
 
     <div class="container">
@@ -807,7 +847,9 @@
             <div class="feature-text">
 
                 <h2>
-                    <span class="gold">ZACK EXPLAIN</span>
+                    <span class="gold">
+                        ZACK EXPLAIN
+                    </span>
                     BY SHTTY
                 </h2>
 
@@ -819,15 +861,32 @@
 
                 <ul class="feature-list">
 
-                    <li>Short Videos</li>
-                    <li>Drama & Movies Content</li>
-                    <li>Popular Videos</li>
-                    <li>Learning Courses</li>
-                    <li>Future Updates</li>
+                    <li>
+                        Short Videos
+                    </li>
+
+                    <li>
+                        Drama & Movies Content
+                    </li>
+
+                    <li>
+                        Popular Videos
+                    </li>
+
+                    <li>
+                        Learning Courses
+                    </li>
+
+                    <li>
+                        Future Updates
+                    </li>
 
                 </ul>
 
-                <a href="about.html" class="btn btn-gold">
+                <a
+                    href="about.html"
+                    class="btn btn-gold"
+                >
                     More About Us
                 </a>
 
@@ -836,7 +895,9 @@
 
             <div class="feature-box-right">
 
-                <div class="big-icon">⭐</div>
+                <div class="big-icon">
+                    ⭐
+                </div>
 
                 <h2 class="gold">
                     ZACK EXPLAIN
@@ -855,8 +916,6 @@
 </section>
 
 
-<!-- ================= SHORT PREVIEW ================= -->
-
 <section>
 
     <div class="container">
@@ -864,7 +923,10 @@
         <div class="section-title">
 
             <h2>
-                Latest <span class="gold">Short Videos</span>
+                Latest
+                <span class="gold">
+                    Short Videos
+                </span>
             </h2>
 
             <p>
@@ -876,6 +938,7 @@
 
         <div class="short-preview">
 
+
             <div class="short-card">
 
                 <div class="short-thumb">
@@ -884,7 +947,9 @@
 
                 <div class="short-info">
 
-                    <h3>Short Video #1</h3>
+                    <h3>
+                        Short Video #1
+                    </h3>
 
                     <a
                         href="https://youtube.com/shorts/s-548_zyleo"
@@ -907,7 +972,9 @@
 
                 <div class="short-info">
 
-                    <h3>Short Video #2</h3>
+                    <h3>
+                        Short Video #2
+                    </h3>
 
                     <a
                         href="https://youtube.com/shorts/iSiiwifAVB8"
@@ -930,7 +997,9 @@
 
                 <div class="short-info">
 
-                    <h3>Short Video #3</h3>
+                    <h3>
+                        Short Video #3
+                    </h3>
 
                     <a
                         href="https://youtube.com/shorts/ZahZXtPCB90"
@@ -947,9 +1016,14 @@
         </div>
 
 
-        <div style="text-align:center; margin-top:30px;">
+        <div
+            style="text-align:center; margin-top:30px;"
+        >
 
-            <a href="short-videos.html" class="btn btn-dark">
+            <a
+                href="short-videos.html"
+                class="btn btn-dark"
+            >
                 View All Shorts →
             </a>
 
@@ -959,8 +1033,6 @@
 
 </section>
 
-
-<!-- ================= COMING SOON ================= -->
 
 <section class="feature">
 
@@ -996,8 +1068,6 @@
 </section>
 
 
-<!-- ================= SOCIAL ================= -->
-
 <section>
 
     <div class="container">
@@ -1005,7 +1075,10 @@
         <div class="section-title">
 
             <h2>
-                Connect With <span class="gold">Us</span>
+                Connect With
+                <span class="gold">
+                    Us
+                </span>
             </h2>
 
             <p>
@@ -1024,6 +1097,7 @@
                 ✈️ Telegram
             </a>
 
+
             <a
                 href="https://www.instagram.com/offx._shtty/"
                 target="_blank"
@@ -1031,7 +1105,10 @@
                 📸 Instagram
             </a>
 
-            <a href="contact.html">
+
+            <a
+                href="contact.html"
+            >
                 📞 Contact
             </a>
 
@@ -1041,8 +1118,6 @@
 
 </section>
 
-
-<!-- ================= FOOTER ================= -->
 
 <footer>
 
@@ -1062,23 +1137,41 @@
 
     <div class="footer-links">
 
-        <a href="index.html">Home</a>
+        <a href="index.html">
+            Home
+        </a>
 
-        <a href="short-videos.html">Short Videos</a>
+        <a href="short-videos.html">
+            Short Videos
+        </a>
 
-        <a href="drama.html">Drama</a>
+        <a href="drama.html">
+            Drama
+        </a>
 
-        <a href="movie.html">Movies</a>
+        <a href="movie.html">
+            Movies
+        </a>
 
-        <a href="popular.html">Popular</a>
+        <a href="popular.html">
+            Popular
+        </a>
 
-        <a href="course.html">Course</a>
+        <a href="course.html">
+            Course
+        </a>
 
-        <a href="gallery.html">Gallery</a>
+        <a href="gallery.html">
+            Gallery
+        </a>
 
-        <a href="about.html">About</a>
+        <a href="about.html">
+            About
+        </a>
 
-        <a href="contact.html">Contact</a>
+        <a href="contact.html">
+            Contact
+        </a>
 
     </div>
 
@@ -1086,7 +1179,8 @@
     <div class="copyright">
 
         <p>
-            © 2026 ZACK EXPLAIN BY SHTTY. All Rights Reserved.
+            © 2026 ZACK EXPLAIN BY SHTTY.
+            All Rights Reserved.
         </p>
 
     </div>
@@ -1094,30 +1188,35 @@
 </footer>
 
 
-<!-- ================= JAVASCRIPT ================= -->
-
 <script>
 
     function toggleMenu() {
 
-        const menu = document.getElementById("navMenu");
+        const menu =
+            document.getElementById("navMenu");
 
         menu.classList.toggle("active");
 
     }
 
 
-    document.querySelectorAll(".nav-menu a").forEach(function(link) {
+    document
+        .querySelectorAll(".nav-menu a")
+        .forEach(function(link) {
 
-        link.addEventListener("click", function() {
+            link.addEventListener(
+                "click",
+                function() {
 
-            document
-                .getElementById("navMenu")
-                .classList.remove("active");
+                    document
+                        .getElementById("navMenu")
+                        .classList
+                        .remove("active");
+
+                }
+            );
 
         });
-
-    });
 
 </script>
 
